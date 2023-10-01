@@ -1,7 +1,6 @@
 import { formatRgb } from 'culori'
 
-const isVSCode =
-  typeof process !== 'undefined' && process.env?.VSCODE_CWD != null
+const isNode = typeof process !== 'undefined' && process?.env?.NODE_ENV != null
 
 const rawColors = {
   red: {
@@ -335,11 +334,11 @@ let colors: Record<string, string | Record<number, string>> = {}
 
 Object.keys(rawColors).forEach((color) => {
   Object.entries(rawColors[color]).forEach(([shade, value]) => {
-    ;(colors[color] ??= {})[shade] = isVSCode
-      ? formatRgb(`oklch(${value})`)
+    ;(colors[color] ??= {})[shade] = isNode
+      ? `oklch(${value} / <alpha-value>)`
+      : formatRgb(`oklch(${value})`)
           ?.replace('rgb', 'rgba')
           .replace(')', ', <alpha-value>)')
-      : `oklch(${value} / <alpha-value>)`
   })
 })
 
