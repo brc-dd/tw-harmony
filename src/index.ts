@@ -1,7 +1,5 @@
 import { formatRgb } from 'culori'
 
-const isNode = typeof process !== 'undefined' && process?.env?.NODE_ENV != null
-
 const rawColors = {
   red: {
     50: '98.83% 0.005 20',
@@ -330,25 +328,32 @@ const rawColors = {
   }
 }
 
-let colors: Record<string, string | Record<number, string>> = {}
+function colors({ legacy }: { legacy?: boolean } = {}) {
+  const fallback =
+    legacy == null
+      ? typeof process === 'undefined' || !process.env.NODE_ENV
+      : legacy
 
-Object.keys(rawColors).forEach((color) => {
-  Object.entries(rawColors[color]).forEach(([shade, value]) => {
-    ;(colors[color] ??= {})[shade] = isNode
-      ? `oklch(${value} / <alpha-value>)`
-      : formatRgb(`oklch(${value})`)
-          ?.replace('rgb', 'rgba')
-          .replace(')', ', <alpha-value>)')
+  const _colors = {}
+
+  Object.keys(rawColors).forEach((color) => {
+    Object.entries(rawColors[color]).forEach(([shade, value]) => {
+      ;(_colors[color] ??= {})[shade] = fallback
+        ? formatRgb(`oklch(${value})`)
+            ?.replace('rgb', 'rgba')
+            .replace(')', ', <alpha-value>)')
+        : `oklch(${value} / <alpha-value>)`
+    })
   })
-})
 
-colors = {
-  inherit: 'inherit',
-  current: 'currentColor',
-  transparent: 'transparent',
-  black: '#000',
-  white: '#fff',
-  ...colors
+  return {
+    inherit: 'inherit',
+    current: 'currentColor',
+    transparent: 'transparent',
+    black: '#000',
+    white: '#fff',
+    ..._colors
+  } as Record<string, string | Record<number, string>>
 }
 
 export { colors }

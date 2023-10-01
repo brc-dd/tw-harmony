@@ -17,7 +17,7 @@ import { colors } from 'tw-harmony'
 
 export default {
   theme: {
-    colors
+    colors: colors()
   }
 } satisfies Config
 ```
@@ -30,7 +30,7 @@ The light blue color is renamed to "sky" to align with Tailwind's naming convent
 
 ### Compatibility
 
-For this to work properly on older browsers, you'll need to add [`@csstools/postcss-oklab-function`](https://github.com/csstools/postcss-plugins/tree/main/plugins/postcss-oklab-function) plugin to your PostCSS config:
+For this to work properly on not-so-modern browsers, you'll need to add [`@csstools/postcss-oklab-function`](https://github.com/csstools/postcss-plugins/tree/main/plugins/postcss-oklab-function) plugin to your PostCSS config:
 
 ```sh
 npm add -D @csstools/postcss-oklab-function
@@ -44,6 +44,16 @@ import autoprefixer from 'autoprefixer'
 
 export default {
   plugins: [tailwindcss(), oklab({ preserve: true }), autoprefixer()]
+}
+```
+
+Non-PostCSS setups like Lightning CSS, the oxide engine, Tailwind CLI, Play CDN, Tailwind Play, etc. don't properly generate fallbacks. So, you'll need to call the `color` method with the `legacy` option set to `true`:
+
+```ts
+export default {
+  theme: {
+    colors: colors({ legacy: true })
+  }
 }
 ```
 

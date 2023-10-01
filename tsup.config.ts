@@ -4,5 +4,6 @@ export default defineConfig({
   entry: ['src/index.ts'],
   clean: true,
   dts: true,
-  format: ['esm', 'cjs']
+  format: ['esm', 'cjs'],
+  target: 'node10'
 })
