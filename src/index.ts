@@ -1,38 +1,6 @@
-export const colors: Record<
-  'inherit' | 'current' | 'transparent' | 'black' | 'white',
-  string
-> &
-  Record<
-    | 'red'
-    | 'orange'
-    | 'amber'
-    | 'yellow'
-    | 'lime'
-    | 'green'
-    | 'emerald'
-    | 'teal'
-    | 'cyan'
-    | 'sky'
-    | 'blue'
-    | 'indigo'
-    | 'violet'
-    | 'purple'
-    | 'fuchsia'
-    | 'pink'
-    | 'rose'
-    | 'slate'
-    | 'gray'
-    | 'zinc'
-    | 'neutral'
-    | 'stone'
-    | 'sand'
-    | 'olive'
-    | 'mauve',
-    Record<
-      50 | 100 | 200 | 300 | 400 | 500 | 600 | 700 | 800 | 900 | 950,
-      string
-    >
-  > = {
+type Shades = 50 | 100 | 200 | 300 | 400 | 500 | 600 | 700 | 800 | 900 | 950
+
+export const colors: Record<string, string | Record<Shades, string>> = {
   inherit: 'inherit',
   current: 'currentColor',
   transparent: 'transparent',
