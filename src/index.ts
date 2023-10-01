@@ -331,7 +331,7 @@ const rawColors = {
   }
 }
 
-const colors: Record<string, string | Record<number, string>> = {}
+let colors: Record<string, string | Record<number, string>> = {}
 
 Object.keys(rawColors).forEach((color) => {
   Object.entries(rawColors[color]).forEach(([shade, value]) => {
@@ -342,5 +342,14 @@ Object.keys(rawColors).forEach((color) => {
       : `oklch(${value} / <alpha-value>)`
   })
 })
+
+colors = {
+  inherit: 'inherit',
+  current: 'currentColor',
+  transparent: 'transparent',
+  black: '#000',
+  white: '#fff',
+  ...colors
+}
 
 export { colors }
