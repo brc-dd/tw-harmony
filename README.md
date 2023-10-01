@@ -53,7 +53,7 @@ Lightning CSS and the oxide engine are not supported yet as the former doesn't s
 
 You'll get IntelliSense and color previews in VS Code without any additional setup. Just make sure you have the [Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss) extension installed.
 
-Color previews in JetBrains IDEs may not work yet. Also, in VS Code, there might be differences between the generated previews and the actual colors. The colors shown in previews are clamped to the sRGB gamut.
+Color previews in JetBrains IDEs may not work yet. Also, in VS Code, there might be differences between the generated previews and the actual colors as the colors shown in previews are clamped to the sRGB gamut.
 
 ## License
 
