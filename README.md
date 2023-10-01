@@ -57,13 +57,11 @@ export default {
 }
 ```
 
-Lightning CSS and the oxide engine are not supported yet as the former doesn't support generating fallbacks when alpha channel is a variable.
-
 ### IntelliSense
 
 You'll get IntelliSense and color previews in VS Code without any additional setup. Just make sure you have the [Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss) extension installed. No setup is required for JetBrains IDEs either.
 
-Note that, there might be differences between the generated previews and the actual colors as the colors shown in previews are transformed to sRGB.
+Note that, there might be slight differences between the generated previews and the actual colors as the colors shown in previews are transformed to sRGB.
 
 ## License
 
