@@ -37,6 +37,9 @@
     "release": "pnpm build && release-it"
   },
   "devDependencies": {
+    "@types/culori": "^2.0.1",
+    "@types/node": "^20.8.0",
+    "culori": "^3.2.0",
     "release-it": "^16.2.1",
     "tsup": "^7.2.0",
     "typescript": "^5.2.2"
