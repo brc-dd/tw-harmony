@@ -1,31 +1,43 @@
 export const colors: Record<
-  | 'red'
-  | 'orange'
-  | 'amber'
-  | 'yellow'
-  | 'lime'
-  | 'green'
-  | 'emerald'
-  | 'teal'
-  | 'cyan'
-  | 'sky'
-  | 'blue'
-  | 'indigo'
-  | 'violet'
-  | 'purple'
-  | 'fuchsia'
-  | 'pink'
-  | 'rose'
-  | 'slate'
-  | 'gray'
-  | 'zinc'
-  | 'neutral'
-  | 'stone'
-  | 'sand'
-  | 'olive'
-  | 'mauve',
-  Record<50 | 100 | 200 | 300 | 400 | 500 | 600 | 700 | 800 | 900 | 950, string>
-> = {
+  'inherit' | 'current' | 'transparent' | 'black' | 'white',
+  string
+> &
+  Record<
+    | 'red'
+    | 'orange'
+    | 'amber'
+    | 'yellow'
+    | 'lime'
+    | 'green'
+    | 'emerald'
+    | 'teal'
+    | 'cyan'
+    | 'sky'
+    | 'blue'
+    | 'indigo'
+    | 'violet'
+    | 'purple'
+    | 'fuchsia'
+    | 'pink'
+    | 'rose'
+    | 'slate'
+    | 'gray'
+    | 'zinc'
+    | 'neutral'
+    | 'stone'
+    | 'sand'
+    | 'olive'
+    | 'mauve',
+    Record<
+      50 | 100 | 200 | 300 | 400 | 500 | 600 | 700 | 800 | 900 | 950,
+      string
+    >
+  > = {
+  inherit: 'inherit',
+  current: 'currentColor',
+  transparent: 'transparent',
+  black: '#000',
+  white: '#fff',
   red: {
     50: 'oklch(98.83% 0.005 20 / <alpha-value>)',
     100: 'oklch(96.68% 0.02 20 / <alpha-value>)',
