@@ -32,6 +32,9 @@
   "files": [
     "dist/*"
   ],
+  "scripts": {
+    "prepublishOnly": "tsup"
+  },
   "devDependencies": {
     "@types/node": "^20.8.0",
     "release-it": "^16.2.1",
