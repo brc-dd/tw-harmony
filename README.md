@@ -22,7 +22,7 @@ export default {
 } satisfies Config
 ```
 
-Note that the light blue color is renamed to "sky" to avoid space in class names.
+Note that the light blue color is renamed to "sky" to align with Tailwind's naming convention.
 
 Also, for this to work properly on older browsers, you will need to add [`@csstools/postcss-oklab-function`](https://github.com/csstools/postcss-plugins/tree/main/plugins/postcss-oklab-function) plugin to your PostCSS config:
 
