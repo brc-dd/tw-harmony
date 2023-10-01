@@ -1,0 +1,42 @@
+{
+  "name": "tw-harmony",
+  "version": "0.0.0",
+  "description": "harmony - accessible color palette - for tailwindcss",
+  "keywords": [
+    "tailwindcss",
+    "tailwind",
+    "css",
+    "harmony",
+    "color",
+    "palette",
+    "accessibility",
+    "a11y",
+    "oklch",
+    "apca"
+  ],
+  "bugs": {
+    "url": "https://github.com/brc-dd/tw-harmony",
+    "email": "brc-dd@hotmail.com"
+  },
+  "repository": "github:brc-dd/tw-harmony",
+  "funding": "https://github.com/sponsors/brc-dd",
+  "license": "MIT",
+  "author": "Divyansh Singh <brc-dd@hotmail.com> (https://github.com/brc-dd)",
+  "sideEffects": false,
+  "type": "module",
+  "exports": {
+    "import": "./dist/index.js",
+    "require": "./dist/index.cjs"
+  },
+  "main": "dist/index.cjs",
+  "files": [
+    "dist/*"
+  ],
+  "devDependencies": {
+    "@types/node": "^20.8.0",
+    "release-it": "^16.2.1",
+    "tsup": "^7.2.0",
+    "typescript": "^5.2.2"
+  },
+  "packageManager": "pnpm@8.8.0"
+}
