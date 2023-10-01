@@ -1,9 +1,7 @@
 import { formatRgb } from 'culori'
 
 const isVSCode =
-  typeof process == null ||
-  typeof process.env == null ||
-  process.env.VSCODE_CWD != null
+  typeof process === 'undefined' || process.env?.VSCODE_CWD != null
 
 const rawColors = {
   red: {
