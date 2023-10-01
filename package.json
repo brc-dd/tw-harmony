@@ -33,7 +33,8 @@
     "dist/*"
   ],
   "scripts": {
-    "prepublishOnly": "tsup"
+    "build": "tsup",
+    "release": "pnpm build && release-it"
   },
   "devDependencies": {
     "@types/node": "^20.8.0",
