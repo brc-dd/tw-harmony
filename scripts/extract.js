@@ -20,11 +20,11 @@ Object.values(source.children).forEach((value) => {
     const [color, shade] = value.name.toLowerCase().split('/')
     ;(oklch[color] ??= {})[shade] = value.componentProperties[
       'Description#6:1'
-    ].value.replace(')', ' / <alpha-value>)')
+    ].value.replace(')', '/<alpha-value>)')
     ;(rgb[color] ??= {})[shade] = formatRgb(
       value.componentProperties['Description#6:1'].value
     )
-      .replace(')', ', <alpha-value>)')
+      .replace(')', ',<alpha-value>)')
       .replace('rgb', 'rgba')
       .replace(/ /g, '')
   })
