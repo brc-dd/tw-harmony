@@ -1,8 +1,8 @@
-import { oklch, rgb } from './colors.js'
+import { oklch, rgba } from './colors.js'
 
 export const colors = ({
   legacy = typeof process === 'undefined' || !process.env.NODE_ENV
-} = {}): Colors => (legacy ? rgb : oklch)
+} = {}): Colors => (legacy ? rgba : oklch)
 
 type Colors = Simplify<
   {

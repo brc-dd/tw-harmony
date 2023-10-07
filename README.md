@@ -65,6 +65,7 @@ Note that, there might be slight differences between the generated previews and 
 - `@evilmartians/harmony` was not published at the time I wrote `tw-harmony`. But since it's now available, you can use it instead if you want to.
 - `@evilmartians/harmony` does not provide legacy output so color previews won't work in VS Code and JetBrains IDEs while using it.
 - `@evilmartians/harmony`'s colors are more precise than what they have published in the Figma file. So, it might look slightly better than `tw-harmony` in some cases.
+- `@evilmartians/harmony` provides base colors as well. `tw-harmony` only provide Tailwind CSS compatible notations.
 
 ## License
 

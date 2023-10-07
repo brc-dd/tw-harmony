@@ -13,7 +13,7 @@ const base = {
 }
 
 const oklch = { ...base }
-const rgb = { ...base }
+const rgba = { ...base }
 
 Object.values(source.children).forEach((value) => {
   Object.values(value.children).forEach((value) => {
@@ -21,7 +21,7 @@ Object.values(source.children).forEach((value) => {
     ;(oklch[color] ??= {})[shade] = value.componentProperties[
       'Description#6:1'
     ].value.replace(')', '/<alpha-value>)')
-    ;(rgb[color] ??= {})[shade] = formatRgb(
+    ;(rgba[color] ??= {})[shade] = formatRgb(
       value.componentProperties['Description#6:1'].value
     )
       .replace(')', ',<alpha-value>)')
@@ -33,5 +33,5 @@ Object.values(source.children).forEach((value) => {
 // prettier-ignore
 fs.writeFileSync(
   './src/colors.js',
-  `export const oklch=JSON.parse('${JSON.stringify(oklch)}'),rgb=JSON.parse('${JSON.stringify(rgb)}');`
+  `export const oklch=JSON.parse('${JSON.stringify(oklch)}'),rgba=JSON.parse('${JSON.stringify(rgba)}');`
 )
