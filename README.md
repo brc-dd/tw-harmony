@@ -24,10 +24,6 @@ export default {
 
 ## Notes
 
-### Differences from the original palette
-
-The light blue color is renamed to "sky" to align with Tailwind's naming convention.
-
 ### Compatibility
 
 For this to work properly on not-so-modern browsers, you'll need to add [`@csstools/postcss-oklab-function`](https://github.com/csstools/postcss-plugins/tree/main/plugins/postcss-oklab-function) plugin to your PostCSS config:

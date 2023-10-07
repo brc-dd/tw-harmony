@@ -33,7 +33,7 @@
     "dist/*"
   ],
   "scripts": {
-    "build": "tsup",
+    "build": "node ./scripts/extract.js && tsup",
     "release": "pnpm build && release-it"
   },
   "devDependencies": {
