@@ -59,7 +59,7 @@ You'll get IntelliSense and color previews in VS Code without any additional set
 
 Note that, there might be slight differences between the generated previews and the actual colors as the colors shown in previews are transformed to sRGB.
 
-### Differences from `@evilmartians/harmony`
+### Differences from [`@evilmartians/harmony`](https://github.com/evilmartians/harmony)
 
 - `@evilmartians/harmony` is the official port of the Harmony color palette. `tw-harmony` is not affiliated with Evil Martians in any way.
 - `@evilmartians/harmony` was not published at the time I wrote `tw-harmony`. But since it's now available, you can use it instead if you want to.
