@@ -64,6 +64,7 @@ Note that, there might be slight differences between the generated previews and 
 - `@evilmartians/harmony` is the official port of the Harmony color palette. `tw-harmony` is not affiliated with Evil Martians in any way.
 - `@evilmartians/harmony` was not published at the time I wrote `tw-harmony`. But since it's now available, you can use it instead if you want to.
 - `@evilmartians/harmony` does not provide legacy output so color previews won't work in VS Code and JetBrains IDEs while using it.
+- `@evilmartians/harmony`'s colors are more precise than what they have published in the Figma file. So, it might look slightly better than `tw-harmony` in some cases.
 
 ## License
 
