@@ -72,3 +72,11 @@ Note that, there might be slight differences between the generated previews and 
 MIT
 
 Used Harmony color palette is licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) by [Evil Martians](https://evilmartians.com/).
+
+## Sponsors
+
+<p align="center">
+  <a href="https://cdn.jsdelivr.net/gh/brc-dd/static/sponsors.svg">
+    <img src='https://cdn.jsdelivr.net/gh/brc-dd/static/sponsors.svg'/>
+  </a>
+</p>
